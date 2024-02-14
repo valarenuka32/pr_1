@@ -10,13 +10,14 @@ const register = async (req, res) => {
         message: "user crated",
         user
     })
+    res.render('./login')
 };
 
-const login = async(req,res)=>{
+const login = async (req, res) => {
 
     console.log(req.body)
 
-  
+
 
 }
 

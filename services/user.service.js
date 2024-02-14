@@ -1,9 +1,9 @@
-const {user}=require("../models");
+const { user } = require("../models");
 
-const register=(body)=>{
+const register = (body) => {
     return user.create(body)
 };
 
-module.exports={
+module.exports = {
     register
 };
