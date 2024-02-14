@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const dbConnect = () => {
+const connectDB = () => {
     mongoose.connect("mongodb+srv://valarenuka32:Fuj8dY9KWSleV6Ek@renuka.fccm3zh.mongodb.net/?retryWrites=true&w=majority")
         .then(() => {
             console.log("database connection successfully!");
@@ -9,4 +9,4 @@ const dbConnect = () => {
         })
 }
 
-module.exports = dbConnect;
+module.exports = connectDB;

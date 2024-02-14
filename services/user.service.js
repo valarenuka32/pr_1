@@ -4,6 +4,4 @@ const register = (body) => {
     return user.create(body)
 };
 
-module.exports = {
-    register
-};
+module.exports = { register };
