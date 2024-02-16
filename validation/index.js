@@ -1,0 +1,1 @@
+module.exports.uservalidation=require("./user.validation");

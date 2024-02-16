@@ -1,7 +1,7 @@
 const { user } = require("../models");
 
-const register = (body) => {
-    return user.create(body)
+const register = (reqBody) => {
+    return user.create(reqBody)
 };
 
 module.exports = { register };

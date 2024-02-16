@@ -1,21 +1,52 @@
 const { userService } = require("../services");
 
 const register = async (req, res) => {
-    console.log(req.body);
+    try {
+        const reqBody = req.body;
 
-    const body = req.body;
+        const userEx = await userService.getUserByEmail(reqBody.email)
+        if (userEx) {
+            throw new Error("User already created by this email!")
+        }
 
-    const user = await userService.register(body);
-    res.status(201).json({
-        message: "user crated",
-        user
-    })
-    // res.render('./login')
+        const user = await userService.register(reqBody);
+        if (!user) {
+            throw new Error("User not found")
+        }
+
+        res.status(201).json({
+            success: true,
+            message: "User create successfully!",
+            data: user
+        })
+    } catch (error) {
+        res.status(400).json({
+            success: false,
+            message: error.message
+        })
+    }
 };
 
 const login = async (req, res) => {
+    try {
+        const reqBody = req.body;
 
-    console.log(req.body)
+        const user = await userService.findUser(reqBody.email)
+
+        if (!user) {
+            throw new Error("User not found")
+        }
+
+        if (body.password != user.password) {
+            res.status(400).json({ message: 'password invalid' })
+        }
+
+    } catch (error) {
+        res.status(400).json({
+            success: false,
+            message: error.message
+        })
+    }
 
 
 
