@@ -1,2 +1,11 @@
 module.exports.user=require("./user.models");
+module.exports.company=require("./company.model");
+module.exports.departments=require("./departments.model");
 module.exports.employee=require("./employees.model");
+module.exports.description=require("./technologies.model");
+module.exports.clients=require("./clients.model");
+module.exports.client_projects=require("./client_project.model");
+module.exports.manager=require("./manager.model");
+module.exports.project=require("./projects.model");
+module.exports.task=require("./task.model");
+module.exports.timesheet=require("./timesheet.model");

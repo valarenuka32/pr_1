@@ -1,26 +1,25 @@
 const mongoose = require("mongoose");
 
-const projectSchema = new mongoose.Schema(
+const managerSchema = new mongoose.Schema(
     {
-        name: {
+        first_name: {
             type: String,
             required: true
         },
-        description: {
+        last_name: {
             type: String,
             required: true
         },
-        start_date: {
-            type: Date,
-            default: Date.now()
-        },
-        end_date: {
-            type: Date,
-            default: Date.now()
-        },
-        Status: {
+        email: {
             type: String,
-            trim: true,
+            required: true
+        },
+        password: {
+            type: String,
+            required: true
+        },
+        phone_number: {
+            type: Number
         },
         is_active: {
             type: Boolean,
@@ -33,5 +32,5 @@ const projectSchema = new mongoose.Schema(
     }
 );
 
-const project = mongoose.model("project", projectSchema);
-module.exports = project;
+const manager = mongoose.model("manager", managerSchema);
+module.exports = manager;

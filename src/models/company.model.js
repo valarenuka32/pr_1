@@ -1,24 +1,23 @@
 const mongoose = require("mongoose");
 
-const projectSchema = new mongoose.Schema(
+const companySchema = new mongoose.Schema(
     {
         name: {
             type: String,
             required: true
         },
-        description: {
+        location: {
             type: String,
             required: true
         },
-        start_date: {
-            type: Date,
-            default: Date.now()
+        type: {
+            type: String,
+            required: true
         },
-        end_date: {
-            type: Date,
-            default: Date.now()
+        time: {
+            type: Number,
         },
-        Status: {
+        day_of_week: {
             type: String,
             trim: true,
         },
@@ -33,5 +32,5 @@ const projectSchema = new mongoose.Schema(
     }
 );
 
-const project = mongoose.model("project", projectSchema);
-module.exports = project;
+const company = mongoose.model("company", companySchema);
+module.exports = company;
