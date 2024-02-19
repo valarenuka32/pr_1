@@ -4,11 +4,6 @@ const register = async (req, res) => {
     try {
         const reqBody = req.body;
 
-        const userEx = await userService.getUserByEmail(reqBody.email)
-        if (userEx) {
-            throw new Error("User already created by this email!")
-        }
-
         const user = await userService.register(reqBody);
         if (!user) {
             throw new Error("User not found")

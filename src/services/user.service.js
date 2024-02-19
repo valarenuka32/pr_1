@@ -1,7 +1,12 @@
 const { user } = require("../models");
 
-const register = (reqBody) => {
+const register = async (reqBody) => {
     return user.create(reqBody)
 };
 
-module.exports = { register };
+const getUserByEmail = async (email) => {
+    return user.findById(email)
+}
+
+module.exports = { register ,
+    getUserByEmail};
