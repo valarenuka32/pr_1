@@ -6,6 +6,10 @@ const departmentsSchema = new mongoose.Schema(
             type: String,
             required: true
         },
+        manager: {
+            type: mongoose.Types.ObjectId,
+            ref: "manager"
+        },
         is_active: {
             type: Boolean,
             default: true
@@ -17,5 +21,5 @@ const departmentsSchema = new mongoose.Schema(
     }
 );
 
-const departments = mongoose.model("departments", departmentsSchema);
-module.exports = departments;
+const department = mongoose.model("department", departmentsSchema);
+module.exports = department;

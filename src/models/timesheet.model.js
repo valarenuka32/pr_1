@@ -14,6 +14,14 @@ const timesheetSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
+        employee: {
+            type: mongoose.Types.ObjectId,
+            ref: "employee"
+        },
+        task: {
+            type: mongoose.Types.ObjectId,
+            ref: "task"
+        },
         is_active: {
             type: Boolean,
             default: true

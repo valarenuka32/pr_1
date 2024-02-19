@@ -18,6 +18,14 @@ const taskSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
+        project: {
+            type: mongoose.Types.ObjectId,
+            ref: "project"
+        },
+        employee: {
+            type: mongoose.Types.ObjectId,
+            ref: "employee"
+        },
         is_active: {
             type: Boolean,
             default: true

@@ -2,7 +2,14 @@ const mongoose = require("mongoose");
 
 const client_projectsSchema = new mongoose.Schema(
     {
-
+        client: {
+            type: mongoose.Types.ObjectId,
+            ref: "client"
+        },
+        project: {
+            type: mongoose.Types.ObjectId,
+            ref: "project"
+        },
         is_active: {
             type: Boolean,
             default: true

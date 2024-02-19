@@ -28,6 +28,10 @@ const employeeSchema = new mongoose.Schema(
         salary: {
             type: Number,
         },
+        department: {
+            type: mongoose.Types.ObjectId,
+            ref: "department"
+        },
         is_active: {
             type: Boolean,
             default: true
