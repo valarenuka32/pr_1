@@ -36,7 +36,7 @@ const updateRecode = async (req, res) => {
     try {
         const timesheetId = req.params.timesheetId;
 
-        const timesheetEx = await timesheetService.gettimesheetById(timesheetId);
+        const timesheetEx = await timesheetService.getTimesheetById(timesheetId);
         if (!timesheetEx) {
             throw new Error("timesheet not found");
         }

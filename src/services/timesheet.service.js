@@ -8,7 +8,7 @@ const timesheetList = async (req, res) => {
     return timesheet.find()
 };
 
-const gettimesheetById = async (timesheetId) => {
+const getTimesheetById = async (timesheetId) => {
     return timesheet.findById(timesheetId);
 };
 
@@ -23,7 +23,7 @@ const deleteRecode = async (timesheetId) => {
 module.exports = {
     createTimesheet,
     timesheetList,
-    gettimesheetById,
+    getTimesheetById,
     updateRecode,
     deleteRecode
 };
