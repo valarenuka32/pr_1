@@ -7,7 +7,8 @@ const createCompany = {
         location: Joi.string().trim().required(),
         type: Joi.string().trim().required(),
         time: Joi.string().required(),
-        day_of_week: Joi.string().trim().required()
+        day_of_week: Joi.string().trim().required(),
+        image:Joi.string()
     })
 };
 
