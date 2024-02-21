@@ -11,7 +11,7 @@ const client_projectList = async (req, res) => {
 };
 
 // get client_project by id
-const getclient_projectById = async (client_projectId) => {
+const getClient_projectById = async (client_projectId) => {
     return client_project.findById(client_projectId);
 };
 
@@ -28,7 +28,7 @@ const deleteRecode = async (client_projectId) => {
 module.exports = {
     createClient_project,
     client_projectList,
-    getclient_projectById,
+    getClient_projectById,
     updateRecode,
     deleteRecode
 };

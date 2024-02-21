@@ -11,7 +11,7 @@ const clientList = async (req, res) => {
 };
 
 // get client by id
-const getclientById = async (clientId) => {
+const getClientById = async (clientId) => {
     return client.findById(clientId);
 };
 
@@ -28,7 +28,7 @@ const deleteRecode = async (clientId) => {
 module.exports = {
     createClient,
     clientList,
-    getclientById,
+    getClientById,
     updateRecode,
     deleteRecode
 };

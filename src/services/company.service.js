@@ -11,7 +11,7 @@ const companyList = async (req, res) => {
 };
 
 // get company by id
-const getcompanyById = async (companyId) => {
+const getCompanyById = async (companyId) => {
     return company.findById(companyId);
 };
 
@@ -27,7 +27,7 @@ const deleteRecode = async (companyId) => {
 module.exports = {
     createCompany,
     companyList,
-    getcompanyById,
+    getCompanyById,
     updateRecode,
     deleteRecode
 };

@@ -11,7 +11,7 @@ const projectList = async (req, res) => {
 };
 
 // get project by id
-const getprojectById = async (projectId) => {
+const getProjectById = async (projectId) => {
     return project.findById(projectId);
 };
 
@@ -28,7 +28,7 @@ const deleteRecode = async (projectId) => {
 module.exports = {
     createProject,
     projectList,
-    getprojectById,
+    getProjectById,
     updateRecode,
     deleteRecode
 };

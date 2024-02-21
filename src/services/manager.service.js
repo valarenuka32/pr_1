@@ -11,7 +11,7 @@ const managerList = async (req, res) => {
 };
 
 // get manager by id
-const getmanagerById = async (managerId) => {
+const getManagerById = async (managerId) => {
     return manager.findById(managerId);
 };
 
@@ -28,7 +28,7 @@ const deleteRecode = async (managerId) => {
 module.exports = {
     createManager,
     managerList,
-    getmanagerById,
+    getManagerById,
     updateRecode,
     deleteRecode
 };

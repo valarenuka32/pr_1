@@ -11,7 +11,7 @@ const departmentList = async (req, res) => {
 };
 
 // get department by id
-const getdepartmentById = async (departmentId) => {
+const getDepartmentById = async (departmentId) => {
     return department.findById(departmentId);
 };
 
@@ -28,7 +28,7 @@ const deleteRecode = async (departmentId) => {
 module.exports = {
     createDepartment,
     departmentList,
-    getdepartmentById,
+    getDepartmentById,
     updateRecode,
     deleteRecode
 };

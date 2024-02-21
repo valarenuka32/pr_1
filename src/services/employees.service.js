@@ -11,7 +11,7 @@ const employeeList = async (req, res) => {
 };
 
 // get employee by id
-const getemployeeById = async (employeeId) => {
+const getEmployeeById = async (employeeId) => {
     return employee.findById(employeeId);
 };
 
@@ -28,7 +28,7 @@ const deleteRecode = async (employeeId) => {
 module.exports = {
     createEmployee,
     employeeList,
-    getemployeeById,
+    getEmployeeById,
     updateRecode,
     deleteRecode
 };

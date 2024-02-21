@@ -11,7 +11,7 @@ const meetingList = async (req, res) => {
 };
 
 // get meeting by id
-const getmeetingById = async (meetingId) => {
+const getMeetingById = async (meetingId) => {
     return meeting.findById(meetingId);
 };
 
@@ -28,7 +28,7 @@ const deleteRecode = async (meetingId) => {
 module.exports = {
     createMeeting,
     meetingList,
-    getmeetingById,
+    getMeetingById,
     updateRecode,
     deleteRecode
 };
