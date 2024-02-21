@@ -2,6 +2,7 @@ const express = require("express");
 const { userController } = require("../controller");
 const { uservalidation } = require("../validation");
 const validate = require("../middlewares/validate");
+const { autheticate } = require("../middlewares/auth");
 const router = express.Router();
 
 // user register
@@ -13,6 +14,7 @@ router.post(
 
 // user login
 router.post(
+    autheticate,
     "/login",
     userController.login
 );
