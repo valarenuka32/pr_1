@@ -21,6 +21,9 @@ const companySchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
+        image: {
+            type: String
+        },
         is_active: {
             type: Boolean,
             default: true
