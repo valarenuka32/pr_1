@@ -14,8 +14,8 @@ router.post(
 
 // user login
 router.post(
-    autheticate,
     "/login",
+    autheticate,
     userController.login
 );
 
