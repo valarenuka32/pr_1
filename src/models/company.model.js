@@ -15,7 +15,7 @@ const companySchema = new mongoose.Schema(
             required: true
         },
         time: {
-            type: Number,
+            type: String,
         },
         day_of_week: {
             type: String,

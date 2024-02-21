@@ -15,7 +15,7 @@ const meetingSchema = new mongoose.Schema(
             default: Date.now()
         },
         time: {
-            type: Number,
+            type: String,
         },
         Location: {
             type: String,
