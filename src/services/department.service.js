@@ -8,6 +8,7 @@ const createDepartment = async (reqBody) => {
 // get all list
 const departmentList = async (req, res) => {
     return department.find()
+    .populate("manager")
 };
 
 // get department by id

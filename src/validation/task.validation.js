@@ -3,10 +3,10 @@ const Joi = require("joi");
 // create task
 const createTask = {
     body: Joi.object().keys({
-        name: Joi.string().required(),
-        description: Joi.string().required(),
+        name: Joi.string().trim().required(),
+        description: Joi.string().trim().required(),
         deadline: Joi.date().required(),
-        Status: Joi.string().required(),
+        Status: Joi.string().trim().required(),
         project: Joi.string().required(),
         employee: Joi.string().required(),
     })

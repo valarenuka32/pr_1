@@ -4,7 +4,7 @@ const departmentsSchema = new mongoose.Schema(
     {
         department_name: {
             type: String,
-            required: true
+            trim: true
         },
         manager: {
             type: mongoose.Types.ObjectId,

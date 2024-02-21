@@ -8,6 +8,8 @@ const createClient_project = async (reqBody) => {
 // get all list
 const client_projectList = async (req, res) => {
     return client_project.find()
+    .populate("client")
+    .populate("project")
 };
 
 // get client_project by id

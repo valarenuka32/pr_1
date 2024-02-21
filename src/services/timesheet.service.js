@@ -8,6 +8,8 @@ const createTimesheet = async (reqBody) => {
 // find all
 const timesheetList = async (req, res) => {
     return timesheet.find()
+    .populate("employee")
+    .populate("task")
 };
 
 // get timesheet by id

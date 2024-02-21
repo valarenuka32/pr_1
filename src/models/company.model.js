@@ -4,15 +4,15 @@ const companySchema = new mongoose.Schema(
     {
         name: {
             type: String,
-            required: true
+            trim: true
         },
         location: {
             type: String,
-            required: true
+            trim: true
         },
         type: {
             type: String,
-            required: true
+            trim: true
         },
         time: {
             type: String,

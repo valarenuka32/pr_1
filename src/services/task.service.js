@@ -8,6 +8,8 @@ const createTask = async (reqBody) => {
 // find all list
 const taskList = async (req, res) => {
     return task.find()
+    .populate("project")
+    .populate("employee")
 };
 
 // get task by id

@@ -8,6 +8,7 @@ const createEmployee = async (reqBody) => {
 // get all employee
 const employeeList = async (req, res) => {
     return employee.find()
+    .populate("department")
 };
 
 // get employee by id
